@@ -65,9 +65,10 @@ public class Register_Driver extends AppCompatActivity {
 
                     ParseObject newDriver = new ParseObject("Driver");
                     newDriver.put("dri_first_name", DriverName);
-                    newDriver.put("dri_street_address",DriverAddress);
+                    newDriver.put("dri_streetaddress",DriverAddress);
                     newDriver.put("dri_city", DriverCity);
-                    newDriver.put("dri_zip_code", DriverZip);
+
+                    newDriver.put("dri_zipcode", Integer.parseInt(DriverZip));
 //                    newDriver.put("dri_id", Integer.parseInt(DriverID));
                     newDriver.put("dri_id", Integer.parseInt(DriverID));
 //                    newDriver.put("ven_phone", Integer.parseInt(DriverCity));
@@ -79,6 +80,20 @@ public class Register_Driver extends AppCompatActivity {
 //                    newDriver.put("password", "password");
                     newDriver.put("dri_username", DriverUser);
                     newDriver.put("dri_password", DriverPassword);
+                    newDriver.put("dri_license", 333);
+                    newDriver.put("dri_status", true);
+                    newDriver.put("dri_insurance", "insurance");
+                    newDriver.put("dri_license_plate", 234);
+                    newDriver.put("dri_vehicle_year", 203);
+                    newDriver.put("dri_dob", 203);
+                    newDriver.put("dri_vehicle_model", 203);
+                    newDriver.put("dri_last_name", "ldldd");
+                    newDriver.put("dri_phone", 224334432);
+                    newDriver.put("dri_ssn", 3435234);
+                    newDriver.put("dri_vehicle_make", ",ale");
+                    newDriver.put("dri_stripe_id", 3435234);
+                    newDriver.put("dri_w4", 3435234);
+
 
                     newDriver.saveInBackground(new SaveCallback() {
                         public void done(ParseException e) {
